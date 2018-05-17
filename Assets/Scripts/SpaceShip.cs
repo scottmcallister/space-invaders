@@ -6,7 +6,7 @@ public class SpaceShip : MonoBehaviour {
 
 	public float shipSpeed = 30;
 
-	// public GameObject theBullet;
+	public GameObject theBullet;
 
 	void FixedUpdate() {
 		float horzMove = Input.GetAxisRaw("Horizontal");
@@ -22,7 +22,7 @@ public class SpaceShip : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButtonDown("Jump")) {
-			
+			Instantiate(theBullet, transform.position, Quaternion.identity);
 		}
 	}
 }
