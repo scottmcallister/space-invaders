@@ -20,11 +20,10 @@ public class SoundManager : MonoBehaviour {
 		} else if (Instance != this) {
 			Destroy(gameObject);
 		}
-
 		soundEffectAudio = GetComponent<AudioSource>();
 	}
 	
-	public void playOneShot(AudioClip clip) {
+	public void PlayOneShot(AudioClip clip) {
 		soundEffectAudio.PlayOneShot(clip);
 	}
 }

@@ -23,6 +23,7 @@ public class SpaceShip : MonoBehaviour {
 	void Update () {
 		if (Input.GetButtonDown("Jump")) {
 			Instantiate(theBullet, transform.position, Quaternion.identity);
+			SoundManager.Instance.PlayOneShot(SoundManager.Instance.bulletFire);
 		}
 	}
 }
